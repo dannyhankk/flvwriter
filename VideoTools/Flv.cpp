@@ -82,6 +82,7 @@ bool flv::FlvWriter::WriteFlvHead(bool flush /*= false*/)
 
 bool flv::FlvWriter::reAllocMem(uint64_t needSize)
 {
+	printf("re-alloc memory\n");
 	m_flvDataLen = (m_flvDataLen > needSize ? m_flvDataLen:needSize) * DEFAULT_BUFFER_INCR_FACTOR;
 	/* increase memory just after origin memory*/
 	uint8_t *newMem = (uint8_t *)realloc(m_flvData, m_flvDataLen);
@@ -150,7 +151,8 @@ bool flv::FlvWriter::AppendVideoFrame(const char *pdata, uint64_t len, bool flus
 	m_dts = m_cts;
 	// AVC NALU
 	appendbyte(1);
-	appendint24(offset);
+	// composition time offset
+	appendint24(0);
 	// skip  NALU header : 0x00, 0x00, 0x00, 0x01
 	appendint(len - skipHeaderLen);
 
@@ -323,7 +325,7 @@ void flv::FlvWriter::append_amf_String(const char *string, uint16_t strlen)
 {
 	// for script data properties name use, no type
 	//appendbyte(flv::script_data_type::String);
-	appendshort(toBigEndian(strlen));
+	appendshort(strlen);
 	appendString(string, strlen);
 }
 
@@ -461,7 +463,7 @@ bool flv::FlvWriter::AppendSPSPPS(const char *psps, uint64_t spslen, const char 
 	//AVC NALU header
 	appendbyte(0);
 	//composition time
-	appendbyte(0);
+	appendint24(0);
 
 	//version
 	appendbyte(1);
@@ -479,7 +481,7 @@ bool flv::FlvWriter::AppendSPSPPS(const char *psps, uint64_t spslen, const char 
 	appendshort(spslen - 4);
 	appendString(psps + 4, spslen - 4);
 
-	//pps
+	//pps num
 	appendbyte(1);
 	//pps len
 	appendshort(pppslen - 4);

@@ -62,7 +62,7 @@ int _tmain(int argc, _TCHAR* argv[])
 			{
 				if (offset != 0 && frameT != FRAME_SEI)
 				{
-					frameend = offset - 1;
+					frameend = offset;
 					frame_264 frame;
 					frame.len = frameend - framestart;
 					frame.pBuf = new char[frame.len];
@@ -80,7 +80,7 @@ int _tmain(int argc, _TCHAR* argv[])
 			{
 				if (offset != 0 && frameT != FRAME_SEI)
 				{
-					frameend = offset - 1;
+					frameend = offset;
 					frame_264 frame;
 					frame.len = frameend - framestart;
 					frame.pBuf = new char[frame.len];
@@ -98,7 +98,7 @@ int _tmain(int argc, _TCHAR* argv[])
 			{
 				if (offset != 0 && frameT != FRAME_SEI)
 				{
-					frameend = offset - 1;
+					frameend = offset;
 					frame_264 frame;
 					frame.len = frameend - framestart;
 					frame.pBuf = new char[frame.len];
@@ -115,7 +115,7 @@ int _tmain(int argc, _TCHAR* argv[])
 			{
 				if (offset != 0 && frameT != FRAME_SEI)
 				{
-					frameend = offset - 1;
+					frameend = offset;
 					frame_264 frame;
 					frame.len = frameend - framestart;
 					frame.pBuf = new char[frame.len];
@@ -130,7 +130,7 @@ int _tmain(int argc, _TCHAR* argv[])
 			{
 				if (offset != 0 && frameT != FRAME_SEI)
 				{
-					frameend = offset - 1;
+					frameend = offset;
 					frame_264 frame;
 					frame.len = frameend - framestart;
 					frame.pBuf = new char[frame.len];
@@ -152,7 +152,7 @@ int _tmain(int argc, _TCHAR* argv[])
 			{
 				if (offset != 0 && frameT != FRAME_SEI)
 				{
-					frameend = offset - 1;
+					frameend = offset;
 					frame_264 frame;
 					frame.len = frameend - framestart;
 					frame.pBuf = new char[frame.len];
@@ -170,7 +170,7 @@ int _tmain(int argc, _TCHAR* argv[])
 			{
 				if (offset != 0 && frameT != FRAME_SEI)
 				{
-					frameend = offset - 1;
+					frameend = offset;
 					frame_264 frame;
 					frame.len = frameend - framestart;
 					frame.pBuf = new char[frame.len];
@@ -188,7 +188,7 @@ int _tmain(int argc, _TCHAR* argv[])
 			{
 				if (offset != 0 && frameT != FRAME_SEI)
 				{
-					frameend = offset - 1;
+					frameend = offset;
 					frame_264 frame;
 					frame.len = frameend - framestart;
 					frame.pBuf = new char[frame.len];
@@ -205,7 +205,7 @@ int _tmain(int argc, _TCHAR* argv[])
 			{
 				if (offset != 0 && frameT != FRAME_SEI)
 				{
-					frameend = offset - 1;
+					frameend = offset;
 					frame_264 frame;
 					frame.len = frameend - framestart;
 					frame.pBuf = new char[frame.len];
@@ -220,7 +220,7 @@ int _tmain(int argc, _TCHAR* argv[])
 			{
 				if (offset != 0 && frameT != FRAME_SEI)
 				{
-					frameend = offset - 1;
+					frameend = offset;
 					frame_264 frame;
 					frame.len = frameend - framestart;
 					frame.pBuf = new char[frame.len];

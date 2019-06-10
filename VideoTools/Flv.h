@@ -120,8 +120,8 @@ namespace flv{
 
 	enum head_flags
 	{
-		FLAG_AUDIO = 0x2,
-		FLAG_VIDEO = 0x8,
+		FLAG_AUDIO = 0x04,
+		FLAG_VIDEO = 0x01,
 	};
 
 #pragma pack(push, 1)

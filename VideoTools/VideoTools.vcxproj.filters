@@ -16,6 +16,12 @@
     <Filter Include="Flv">
       <UniqueIdentifier>{44f8b0e4-8e05-46a7-9ebe-b1f610efa627}</UniqueIdentifier>
     </Filter>
+    <Filter Include="mp4">
+      <UniqueIdentifier>{8f878585-3dff-4d40-a4e1-abd2b81a6500}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="utils">
+      <UniqueIdentifier>{13106132-41af-4a84-b759-61dbcb2cb2dd}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -30,6 +36,12 @@
     <ClInclude Include="Flv.h">
       <Filter>Flv</Filter>
     </ClInclude>
+    <ClInclude Include="mp4.h">
+      <Filter>mp4</Filter>
+    </ClInclude>
+    <ClInclude Include="util.h">
+      <Filter>utils</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -40,6 +52,9 @@
     </ClCompile>
     <ClCompile Include="Flv.cpp">
       <Filter>Flv</Filter>
+    </ClCompile>
+    <ClCompile Include="mp4.cpp">
+      <Filter>mp4</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

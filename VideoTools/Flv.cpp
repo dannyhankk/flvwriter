@@ -29,8 +29,6 @@ bool flv::FlvWriter::CreateWriter(std::string & flvName)
 		}
 		m_flvWriterOffset = 0;
 	}
-
-
 }
 
 void flv::FlvWriter::setAudioCodec(uint32_t codecType)
@@ -281,7 +279,7 @@ bool flv::FlvWriter::WriteFlvScript(bool flush /*= false*/)
 		case 10: append_amf_Double(flv::FLV_CODECID_AAC); break;
 		case 7:  append_amf_Double(flv::FLV_CODECID_PCMA);break;
 		case 8:  
-		default:append_amf_Double(flv::FLV_CODECID_PCMU); break;
+		default: append_amf_Double(flv::FLV_CODECID_PCMU); break;
 	}
 	append_amf_String(flv::pASampleRate, strlen(flv::pASampleRate));
 	switch (m_SoundRate)
